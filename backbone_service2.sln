@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "backbone_service2", "backbone_service2\backbone_service2.csproj", "{248B02D3-A604-432F-9055-3BF0239655ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "admin_olimpia", "admin_olimpia\admin_olimpia.csproj", "{BFDFF26C-30CB-48AB-B119-BC7D8B93D58B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{46AEFB8B-0640-43FA-8F96-DC4EE4694E1E} = {46AEFB8B-0640-43FA-8F96-DC4EE4694E1E}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "backbone_wcf_client", "backbone_wcf_client\backbone_wcf_client.csproj", "{46AEFB8B-0640-43FA-8F96-DC4EE4694E1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{248B02D3-A604-432F-9055-3BF0239655ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{248B02D3-A604-432F-9055-3BF0239655ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{248B02D3-A604-432F-9055-3BF0239655ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{248B02D3-A604-432F-9055-3BF0239655ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFDFF26C-30CB-48AB-B119-BC7D8B93D58B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFDFF26C-30CB-48AB-B119-BC7D8B93D58B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFDFF26C-30CB-48AB-B119-BC7D8B93D58B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFDFF26C-30CB-48AB-B119-BC7D8B93D58B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46AEFB8B-0640-43FA-8F96-DC4EE4694E1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46AEFB8B-0640-43FA-8F96-DC4EE4694E1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46AEFB8B-0640-43FA-8F96-DC4EE4694E1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46AEFB8B-0640-43FA-8F96-DC4EE4694E1E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC7F671C-6E6B-4363-878E-39F66B1BE0E7}
+	EndGlobalSection
+EndGlobal

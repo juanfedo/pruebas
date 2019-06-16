@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/backbone_wcf_client" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/backbone_wcf_client" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="CompositeType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BoolValue" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StringValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompositeType" nillable="true" type="tns:CompositeType" />
+  <xs:complexType name="ArrayOfcliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="cliente" nillable="true" type="tns:cliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfcliente" nillable="true" type="tns:ArrayOfcliente" />
+  <xs:complexType name="cliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="telephone" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="cliente" nillable="true" type="tns:cliente" />
+  <xs:simpleType name="Service1.Tipo_Transaccion">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Transferencia" />
+      <xs:enumeration value="Consignación" />
+      <xs:enumeration value="Retiro" />
+      <xs:enumeration value="Inicio" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Service1.Tipo_Transaccion" nillable="true" type="tns:Service1.Tipo_Transaccion" />
+  <xs:complexType name="transaccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cuenta" nillable="true" type="tns:Cuenta" />
+      <xs:element minOccurs="0" name="Cuenta1" nillable="true" type="tns:Cuenta" />
+      <xs:element minOccurs="0" name="cuenta_destino_id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="cuenta_id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="fecha" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="tipo_transaccion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="valor" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="transaccion" nillable="true" type="tns:transaccion" />
+  <xs:complexType name="Cuenta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="balance" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="number" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="transaccion" nillable="true" type="tns:ArrayOftransaccion" />
+      <xs:element minOccurs="0" name="transaccion1" nillable="true" type="tns:ArrayOftransaccion" />
+      <xs:element minOccurs="0" name="type" nillable="true" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cuenta" nillable="true" type="tns:Cuenta" />
+  <xs:complexType name="ArrayOftransaccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="transaccion" nillable="true" type="tns:transaccion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftransaccion" nillable="true" type="tns:ArrayOftransaccion" />
+</xs:schema>
